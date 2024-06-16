@@ -1,3 +1,5 @@
+import math
+
 class Calculator:
     def add(self, x, y):
         self.check_types(x, y)
@@ -21,6 +23,20 @@ class Calculator:
     def power(self, x, y):
         self.check_types(x, y)
         return x ** y
+        
+    def sqrt(self, x):
+        self.check_types(x, x)
+        if x < 0:
+            raise TypeError("Error: sqrt can't use negative values")
+        else:
+            return math.sqrt(x)
+    def log10(self, x):
+        self.check_types(x, x)
+        if x < 0:
+            raise TypeError("Error: log10 can't use negative values")
+        else:
+            return math.log10(x)
+    
 
     def check_types(self, x, y):
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
