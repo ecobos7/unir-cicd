@@ -1,4 +1,3 @@
-XX
 import http.client
 import os
 import unittest
